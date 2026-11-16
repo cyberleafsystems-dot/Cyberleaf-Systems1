@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "KFZ Diagnose",
+    "price": 25,
+    "desc": "Fehlerauslesen & Diagnose"
+  },
+  {
+    "id": 2,
+    "name": "Codierung",
+    "price": 60,
+    "desc": "Steuergeräte anpassen"
+  },
+  {
+    "id": 3,
+    "name": "Webseite Basic",
+    "price": 450,
+    "desc": "Moderne Firmenwebseite"
+  }
+]

@@ -1,0 +1,475 @@
+```html
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Shop | CyberLeaf Systems</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.shop{
+    width:min(1400px,92%);
+    margin:30px auto 80px;
+}
+
+.shop-title{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.shop-title h1{
+    font-size:clamp(55px,8vw,100px);
+    font-weight:800;
+    margin-bottom:25px;
+}
+
+.shop-title span{
+    color:#7dff57;
+}
+
+.shop-title p{
+    color:#d0d0d0;
+    font-size:22px;
+    line-height:1.7;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(340px,1fr));
+    gap:35px;
+}
+
+.product-card{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:25px;
+    overflow:hidden;
+    backdrop-filter:blur(16px);
+    transition:.3s;
+}
+
+.product-card:hover{
+    transform:translateY(-8px);
+    border-color:#7dff57;
+}
+
+.product-image{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+}
+
+.product-content{
+    padding:30px;
+    text-align:center;
+}
+
+.product-content h2{
+    font-size:38px;
+    margin-bottom:20px;
+}
+
+.product-content p{
+    color:#d0d0d0;
+    line-height:1.8;
+}
+
+.features{
+    margin:35px 0;
+    text-align:left;
+}
+
+.features li{
+    list-style:none;
+    margin-bottom:14px;
+    color:#d7d7d7;
+}
+
+.features li::before{
+    content:"✔";
+    color:#7dff57;
+    margin-right:12px;
+}
+
+.price{
+    font-size:48px;
+    font-weight:800;
+    color:#7dff57;
+    margin-bottom:25px;
+}
+
+.buy-btn{
+    width:100%;
+    padding:18px;
+    border:none;
+    border-radius:14px;
+    background:#7dff57;
+    color:#000;
+    font-size:20px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.buy-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:
+    0 0 25px rgba(125,255,87,.45);
+}
+
+.shop-info{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin-top:70px;
+}
+
+.info-box{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+}
+
+.info-box h3{
+    color:#7dff57;
+    margin-bottom:15px;
+}
+
+.info-box p{
+    color:#d0d0d0;
+    line-height:1.6;
+}
+
+@media(max-width:768px){
+
+    .shop{
+        margin-top:160px;
+    }
+
+    .product-content h2{
+        font-size:30px;
+    }
+
+    .price{
+        font-size:40px;
+    }
+
+}
+</style>
+
+</head>
+<body>
+
+<header class="navbar">
+
+<a href="index.html" class="logo">
+<img
+src="logo.png"
+alt="CyberLeaf Systems"
+class="logo-img">
+</a>
+
+<nav>
+<a href="index.html">Start</a>
+<a href="überuns.html">Über uns</a>
+<a href="info-kategorie1.html">KFZ</a>
+<a href="Programieren.html">Programmieren</a>
+<a href="Softwarekauf.html">Software</a>
+<a href="termin.html">Termin</a>
+<a href="kundenportal.html">Kundenportal</a>
+<a class="active" href="shop.html">Shop</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="overlay"></div>
+
+<div class="shop">
+
+<div class="shop-title">
+
+<h1>
+Online <span>Shop</span>
+</h1>
+
+<p>
+Entdecke unsere digitalen Lösungen
+und bringe dein Projekt
+auf das nächste Level.
+</p>
+
+</div>
+
+<div class="product-grid">
+
+<!-- Webseiten -->
+
+<div class="product-card">
+
+<img
+src="img/webseiten.jpg"
+alt="Webseiten"
+class="product-image">
+
+<div class="product-content">
+
+<h2>Webseiten</h2>
+
+<p>
+Moderne, responsive und
+SEO-optimierte Webseiten
+für Unternehmen und
+Selbstständige.
+</p>
+
+<ul class="features">
+<li>Individuelles Design</li>
+<li>Responsive für alle Geräte</li>
+<li>SEO Optimierung</li>
+<li>Schnelle Ladezeiten</li>
+<li>DSGVO-konform</li>
+</ul>
+
+<div class="price">
+ab 449€
+</div>
+
+<button
+class="buy-btn"
+onclick="location.href='angebot.html'">
+Angebot anfragen
+</button>
+
+</div>
+
+</div>
+
+<!-- App -->
+
+<div class="product-card">
+
+<img
+src="img/app.jpg"
+alt="App"
+class="product-image">
+
+<div class="product-content">
+
+<h2>App</h2>
+
+<p>
+Individuelle Apps
+für Android und iOS –
+modern, schnell und
+leistungsstark.
+</p>
+
+<ul class="features">
+<li>Android & iOS Apps</li>
+<li>Modernes Design</li>
+<li>Individuelle Funktionen</li>
+<li>Skalierbar</li>
+<li>Persönlicher Support</li>
+</ul>
+
+<div class="price">
+ab 899€
+</div>
+
+<button
+class="buy-btn"
+onclick="location.href='angebot.html'">
+Angebot anfragen
+</button>
+
+</div>
+
+</div>
+
+<!-- Software -->
+
+<div class="product-card">
+
+<img
+src="img/software.jpg"
+alt="Software"
+class="product-image">
+
+<div class="product-content">
+
+<h2>
+Individuelle Software
+</h2>
+
+<p>
+Maßgeschneiderte
+Softwarelösungen für
+Unternehmen und
+Privatkunden.
+</p>
+
+<ul class="features">
+<li>Software nach Maß</li>
+<li>Individuelle Entwicklung</li>
+<li>Sichere Systeme</li>
+<li>Zukunftssicher</li>
+<li>Persönlicher Support</li>
+</ul>
+
+<div class="price">
+ab 1.499€
+</div>
+
+<button
+class="buy-btn"
+onclick="location.href='angebot.html'">
+Angebot anfragen
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="shop-info">
+
+<div class="info-box">
+<h3>🔒 Sicher</h3>
+<p>
+Persönliche Beratung
+und sichere Umsetzung.
+</p>
+</div>
+
+<div class="info-box">
+<h3>⚡ Schnell</h3>
+<p>
+Dein Projekt startet
+direkt nach der Anfrage.
+</p>
+</div>
+
+<div class="info-box">
+<h3>🛠 Support</h3>
+<p>
+Wir begleiten dein Projekt
+von Anfang bis Ende.
+</p>
+</div>
+
+<div class="info-box">
+<h3>⭐ Qualität</h3>
+<p>
+Moderne Lösungen
+auf höchstem Niveau.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer class="shop-footer">
+
+    <div class="footer-grid">
+
+        <!-- Logo -->
+        <div class="footer-box footer-logo-box">
+
+            <img
+                src="logo.png"
+                alt="CyberLeaf Systems"
+                class="footer-logo">
+
+        </div>
+
+        <!-- Navigation -->
+        <div class="footer-box">
+
+            <h3>Navigation</h3>
+
+            <a href="index.html">Start</a>
+            <a href="überuns.html">Über uns</a>
+            <a href="info-kategorie1.html">KFZ</a>
+            <a href="Programieren.html">Programmieren</a>
+
+        </div>
+
+        <!-- Rechtliches -->
+        <div class="footer-box">
+
+            <h3>Rechtliches</h3>
+
+            <a href="impressum.html">Impressum</a>
+            <a href="datenschutz.html">Datenschutz</a>
+            <a href="agb.html">AGB</a>
+
+        </div>
+
+        <!-- Kontakt -->
+        <div class="footer-box">
+
+            <h3>Kontakt</h3>
+
+            <p>✉ cyberleafsystems@gmail.com</p>
+            <p>📞 +49 162 8990132</p>
+            <p>📍 Deutschland</p>
+
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-box">
+
+            <h3>Folge uns</h3>
+
+            <div class="socials">
+
+                <a
+                    href="#"
+                    aria-label="Facebook">
+                    f
+                </a>
+
+                <a
+                    href="#"
+                    aria-label="Instagram">
+                    📷
+                </a>
+
+                <a
+                    href="#"
+                    aria-label="LinkedIn">
+                    in
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 CyberLeaf Systems -
+        Alle Rechte vorbehalten.
+    </div>
+
+</footer>
+
+
+
+</body>
+</html>
+

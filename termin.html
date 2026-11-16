@@ -1,0 +1,331 @@
+```html
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Termin | CyberLeaf Systems</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+<style>
+.form-card{
+    width:min(800px,100%);
+    margin:50px auto 0;
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:18px;
+    padding:35px;
+    backdrop-filter:blur(14px);
+}
+
+.form-group{
+    margin-bottom:20px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:8px;
+    color:#d7d7d7;
+    font-weight:500;
+}
+
+.form-card input,
+.form-card textarea{
+    width:100%;
+    padding:14px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:12px;
+    color:#fff;
+    font-size:15px;
+}
+
+.form-card textarea{
+    min-height:140px;
+    resize:vertical;
+}
+
+.form-card input:focus,
+.form-card textarea:focus{
+    outline:none;
+    border-color:#7dff57;
+}
+
+.fallback{
+    display:none;
+    margin-top:20px;
+    color:#7dff57;
+}
+
+@media(max-width:900px){
+    .form-card{
+        padding:25px;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+        <img
+            src="logo.png"
+            alt="CyberLeaf Systems"
+            class="logo-img"
+        >
+    </a>
+
+    <nav>
+        <a href="index.html">Start</a>
+        <a href="überuns.html">Über uns</a>
+        <a href="info-kategorie1.html">KFZ</a>
+        <a href="Programieren.html">Programmieren</a>
+        <a href="Softwarekauf.html">Software</a>
+        <a href="termin.html">Termin</a>
+        <a href="kundenportal.html">Kundenportal</a>
+    </nav>
+
+</header>
+
+<section class="hero">
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+        <h1>Online <span>Termin</span></h1>
+
+        <h2>Termin direkt per WhatsApp anfragen</h2>
+
+        <p>
+            Vereinbare schnell und unkompliziert einen Termin
+            für Diagnose, Beratung oder Softwareleistungen.
+        </p>
+
+        <div class="form-card">
+
+            <form id="terminForm">
+
+                <div class="form-group">
+                    <label>Name *</label>
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Dein Name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>Datum *</label>
+                    <input
+                        type="date"
+                        id="datum"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>Uhrzeit *</label>
+                    <input
+                        type="time"
+                        id="uhrzeit"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>Nachricht</label>
+                    <textarea
+                        id="nachricht"
+                        placeholder="Beschreibe kurz dein Anliegen..."
+                    ></textarea>
+                </div>
+
+                <div class="buttons">
+
+                    <button
+                        type="submit"
+                        class="primary"
+                    >
+                        📲 Per WhatsApp anfragen
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick="location.href='index.html'"
+                    >
+                        Zurück
+                    </button>
+
+                </div>
+
+            </form>
+
+            <p
+                id="fallback"
+                class="fallback"
+            >
+                Bitte WhatsApp öffnen oder anrufen unter:
+                +49 162 8990132
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer class="site-footer">
+
+    <div class="footer-grid">
+
+        <!-- Logo -->
+        <div class="footer-box footer-logo-box">
+            <img
+                src="logo.png"
+                alt="CyberLeaf Systems"
+                class="footer-logo">
+        </div>
+
+        <!-- Navigation -->
+        <div class="footer-box">
+
+            <h3>Navigation</h3>
+
+            <a href="index.html">Start</a>
+            <a href="überuns.html">Über uns</a>
+            <a href="info-kategorie1.html">KFZ</a>
+            <a href="Programieren.html">Programmieren</a>
+            <a href="Softwarekauf.html">Software</a>
+            <a href="termin.html">Termin</a>
+            <a href="kundenportal.html">Kundenportal</a>
+            <a href="shop.html">Shop</a>
+
+        </div>
+
+        <!-- Rechtliches -->
+        <div class="footer-box">
+
+            <h3>Rechtliches</h3>
+
+            <a href="impressum.html">Impressum</a>
+            <a href="datenschutz.html">Datenschutz</a>
+            <a href="agb.html">AGB</a>
+
+        </div>
+
+        <!-- Kontakt -->
+        <div class="footer-box">
+
+            <h3>Kontakt</h3>
+
+            <p>✉ cyberleafsystems@gmail.com</p>
+            <p>📞 +49 162 8990132</p>
+            <p>📍 Deutschland</p>
+
+        </div>
+
+        <!-- Social -->
+        <div class="footer-box">
+
+            <h3>Folge uns</h3>
+
+            <div class="socials">
+
+                <a href="#">f</a>
+                <a href="#">📷</a>
+                <a href="#">in</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 CyberLeaf Systems -
+        Alle Rechte vorbehalten.
+    </div>
+
+</footer>
+
+<script>
+document
+.getElementById("terminForm")
+.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const name =
+        document
+        .getElementById("name")
+        .value
+        .trim();
+
+    const datum =
+        document
+        .getElementById("datum")
+        .value;
+
+    const uhrzeit =
+        document
+        .getElementById("uhrzeit")
+        .value;
+
+    const nachricht =
+        document
+        .getElementById("nachricht")
+        .value
+        .trim();
+
+    if(!name || !datum || !uhrzeit){
+        alert(
+            "Bitte alle Pflichtfelder ausfüllen."
+        );
+        return;
+    }
+
+    const text =
+`Neue Terminanfrage:
+
+Name: ${name}
+Datum: ${datum}
+Uhrzeit: ${uhrzeit}
+Nachricht: ${nachricht}`;
+
+    const whatsappUrl =
+        "https://wa.me/491628990132?text=" +
+        encodeURIComponent(text);
+
+    const win =
+        window.open(
+            whatsappUrl,
+            "_blank"
+        );
+
+    setTimeout(function(){
+
+        if(
+            !win ||
+            win.closed ||
+            typeof win.closed === "undefined"
+        ){
+            document
+                .getElementById("fallback")
+                .style.display = "block";
+        }
+
+    },1500);
+
+});
+</script>
+
+</body>
+</html>
+
